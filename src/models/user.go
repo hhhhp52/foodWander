@@ -28,6 +28,7 @@ type UserProfile struct {
 	LastName    string    `json:"last_name"`
 	PhoneNumber string    `json:"phone_number"`
 	Email       string    `json:"email"`
+	CountryID   int       `json:"country_id"`
 	CreatedAt   time.Time `json:"created_at"`
 	UpdatedAt   time.Time `json:"updated_at"`
 }

@@ -1,29 +1,14 @@
 package handlers
 
 import (
-	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
 
 func Register(c *gin.Context) {
-	defer func() {
-		if r := recover(); r != nil {
-			fmt.Println(r)
-			c.JSON(http.StatusInternalServerError, gin.H{"error": "Error Registering User"})
-			return
-		}
-	}()
 }
 
 func Login(c *gin.Context) {
-	defer func() {
-		if r := recover(); r != nil {
-			fmt.Println(r)
-			c.JSON(http.StatusInternalServerError, gin.H{"error": "Error Registering User"})
-			return
-		}
-	}()
 
 	var input struct {
 		Email    string `json:"email"`
@@ -43,14 +28,6 @@ func Login(c *gin.Context) {
 }
 
 func VerifyEmail(c *gin.Context) {
-	defer func() {
-		if r := recover(); r != nil {
-			fmt.Println(r)
-			c.JSON(http.StatusInternalServerError, gin.H{"error": "Error Registering User"})
-			return
-		}
-	}()
-
 	var input struct {
 		Email string `json:"email"`
 	}
