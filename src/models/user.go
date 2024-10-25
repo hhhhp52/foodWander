@@ -7,6 +7,8 @@ import (
 
 type User struct {
 	ID           uuid.UUID `json:"id"`
+	Email        string    `json:"email"`
+	Password     string    `json:"password"`
 	Category     string    `json:"category"`
 	Level        string    `json:"level"`
 	Verified     bool      `json:"verified"`
@@ -27,7 +29,6 @@ type UserProfile struct {
 	FirstName   string    `json:"first_name"`
 	LastName    string    `json:"last_name"`
 	PhoneNumber string    `json:"phone_number"`
-	Email       string    `json:"email"`
 	CountryID   int       `json:"country_id"`
 	CreatedAt   time.Time `json:"created_at"`
 	UpdatedAt   time.Time `json:"updated_at"`

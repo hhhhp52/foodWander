@@ -68,6 +68,8 @@ func Router() *gin.Engine {
 	api.POST("/login", handlers.Login)
 	api.POST("/verify-email", handlers.VerifyEmail)
 	api.POST("/logout", handlers.Logout)
+	api.POST("/forgot-password", handlers.ForgetPassword)
+	api.POST("/reset-password", handlers.ResetPassword)
 
 	restaurant := api.Group("/restaurant")
 	restaurant.GET("/all", handlers.GetRestaurants)

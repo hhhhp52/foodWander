@@ -1,4 +1,4 @@
-package utils
+package helpers
 
 const (
 	SendEmail         = "test@gmail"

@@ -3,7 +3,6 @@ package helpers
 import (
 	"crypto/sha256"
 	"fmt"
-	"foodWander/src/utils"
 	"math/rand"
 	"net/smtp"
 	"regexp"
@@ -27,7 +26,7 @@ func IsValidPassword(password string) bool {
 	return hasLower && hasUpper && hasSpecial
 }
 
-func TransferPassword(password string) string {
+func TransferEncryptPassword(password string) string {
 	return fmt.Sprintf("%x", sha256.Sum256([]byte(password)))
 }
 
@@ -37,11 +36,11 @@ func GenerateVerificationCode() string {
 }
 
 func SendVerificationEmail(email, code string) error {
-	from := utils.SendEmail
-	password := utils.SendEmailPassword
+	from := SendEmail
+	password := SendEmailPassword
 	to := email
-	smtpHost := utils.SmtpHost
-	smtpPort := utils.SmtpPort
+	smtpHost := SmtpHost
+	smtpPort := SmtpPort
 
 	message := fmt.Sprintf("Subject: Email Verification Code\n\nYour verification code is: %s", code)
 
