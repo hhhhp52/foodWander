@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"foodWander/src/database"
 	"foodWander/src/routes"
 	"golang.org/x/sync/errgroup"
 	"net/http"
@@ -13,7 +14,13 @@ var (
 )
 
 func main() {
-	fmt.Println("Starting server on port 8080...")
+	fmt.Println("Starting server on port 8080 and 8081...")
+
+	// Initialize the database connection
+	database.ConnectDB()
+
+	// Migrate the database
+	database.Migrate()
 
 	router1 := routes.Router()
 	router2 := routes.Router()

@@ -1,0 +1,17 @@
+DROP TABLE users;
+DROP TABLE user_tokens;
+DROP TABLE user_profiles;
+DROP TABLE restaurant;
+DROP TABLE restaurant_menu;
+DROP TABLE menu_category;
+DROP TABLE restaurant_type;
+DROP TABLE restaurant_tag;
+DROP TABLE restaurant_tag_mapping;
+DROP TABLE restaurant_rating;
+DROP TABLE restaurant_rating_history;
+DROP TABLE organization;
+DROP TABLE organization_member;
+DROP TABLE organization_role;
+DROP TABLE fundraising;
+DROP TABLE fundraising_sponsor;
+DROP TABLE countries;
